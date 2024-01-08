@@ -1,0 +1,42 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+    /* Este gradiente comienza con un azul vibrante, pasa a un amarillo anaranjado, luego a rosa y finaliza en un morado intenso */
+    background: linear-gradient(45deg, #4951e6, #f9a825, #ec407a, #6d11c4);
+
+    /* Asegúrate de que el gradiente cubra toda la pantalla */
+    width: 100vw;
+    height: 100vh;
+
+    /* Ajustes adicionales para que el gradiente sea responsive y cubra todo el contenido */
+    background-attachment: fixed;
+    background-size: cover;
+  }
+
+/* Barra de desplazamiento completa */
+::-webkit-scrollbar {
+    width: 8px; /* Ancho de la barra vertical */
+    height: 8px; /* Altura de la barra horizontal */
+}
+
+/* Botones arriba/abajo en la barra de desplazamiento */
+::-webkit-scrollbar-button {
+    display: none; /* Oculta los botones */
+}
+
+/* Track o pista de la barra */
+::-webkit-scrollbar-track {
+    background: #d1d1d1; /* Gris claro para contraste */
+    border-radius: 10px;
+}
+
+/* Thumb o la parte móvil de la barra */
+::-webkit-scrollbar-thumb {
+    background: #24105a;
+    border-radius: 10px;
+}
+
+/* Thumb o la parte móvil de la barra al pasar el mouse */
+::-webkit-scrollbar-thumb:hover {
+    background: #4a16da; /* Un tono más oscuro del verde azulado al pasar el mouse */
+}
+

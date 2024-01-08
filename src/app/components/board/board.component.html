@@ -1,0 +1,56 @@
+<div class="container mt-3">
+    <!-- Contadores para los equipos -->
+    <div class="row mb-3 d-flex justify-content-center align-items-center">
+        <div class="col-4 text-center team-counter-red">
+            <h3>Equipo 1: <span class="score">{{ team1Score }}</span></h3>
+            <button class="btn hover-effect-success" (click)="increaseScore('team1')" (click)="playSoundScore()"><i class="fa-solid fa-circle-plus fa-2xl" style="color: #0aae1d;"></i></button>
+            <button class="btn hover-effect-danger" (click)="resetScore('team1')"><i class="fa-solid fa-rotate-right fa-2xl" style="color: #db0606;"></i></button>
+        </div>
+        <div class="col-4 text-center team-counter-blue">
+            <h3>Equipo 2: <span class="score">{{ team2Score }}</span></h3>
+            <button class="btn hover-effect-success" (click)="increaseScore('team2')" (click)="playSoundScore()"><i class="fa-solid fa-circle-plus fa-2xl" style="color: #0aae1d;"></i></button>
+            <button class="btn hover-effect-danger" (click)="resetScore('team2')"><i class="fa-solid fa-rotate-right fa-2xl" style="color: #db0606;"></i></button>
+        </div>
+    </div>
+    <!-- Resto del contenido... -->
+    <div class="row">
+        <div class="text-center"> <!-- Clase para centrar -->
+            <img src="../assets/img/100 Abarcas - Logo.png" alt="Logo" class="custom-logo"> <!-- Clase personalizada para el tamaño -->
+        </div>
+      <!-- Espacios del tablero -->
+      <div class="col-12 d-flex justify-content-between mb-3 mt-4">
+        <div *ngFor="let space of spaces; let i = index" class="game-space">
+          <!-- Solo muestra el contenido si 'revealed' es verdadero -->
+          <div class="game-content" *ngIf="space.revealed">
+            {{ space.content }}
+          </div>
+          <button class="btn btn-warning" (click)="revealContent(i)" (click)="playSoundDiscover()"><i class="fa-solid fa-eye fa-2xl" style="color: #000000;"></i></button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row mt-2">
+    <div class="col d-flex justify-content-center">
+        <div class="icon-bg" style="background-color: #000000;">
+            <button class="btn" (click)="playSoundCorrect()"><i class="fa-solid fa-circle-check fa-2xl" style="color: #0db416;"></i></button>
+        </div>
+    </div>
+    <div class="col d-flex justify-content-center">
+        <div class="icon-bg" style="background-color: #000000;">
+            <button class="btn" (click)="playSoundIncorrect()"><i class="fa-solid fa-circle-xmark fa-2xl" style="color: #ff0000;"></i></button>
+        </div>
+    </div>
+    <div class="col d-flex justify-content-center">
+        <div class="icon-bg" style="background-color: #000000;">
+            <button class="btn" (click)="playSoundTimer()"><i class="fa-solid fa-stopwatch fa-2xl" style="color: #fffcfc;"></i></button>
+        </div>
+    </div>
+    <div class="col d-flex justify-content-center">
+        <div class="icon-bg" style="background-color: #000000;">
+            <button class="btn" (click)="navigateToHome()"><i class="fa-solid fa-house fa-2xl" style="color: #ffffff;"></i></button>
+        </div>
+    </div>
+</div>
+
+

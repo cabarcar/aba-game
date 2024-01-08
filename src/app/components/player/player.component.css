@@ -1,0 +1,21 @@
+.game-button {
+    background-color: #ff0000; /* Rojo */
+    color: white;
+    border: none;
+    font-size: 60px; /* Tamaño de fuente más grande */
+    padding: 90px 120px; /* Aumentar el relleno para hacer el botón más grande */
+    border-radius: 50px; /* Hacer los bordes más redondos */
+    box-shadow: 0 8px #900;
+    text-shadow: 0 3px 4px rgba(0,0,0,0.3);
+    transition: all 0.3s;
+  }
+
+  .game-button:hover {
+    background-color: #e60000; /* Rojo más oscuro al pasar el ratón */
+  }
+
+  .game-button:active {
+    background-color: #cc0000; /* Rojo aún más oscuro al hacer clic */
+    box-shadow: 0 4px #900;
+    transform: translateY(4px);
+  }
